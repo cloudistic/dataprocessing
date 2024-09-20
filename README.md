@@ -80,6 +80,7 @@
     * Copy the data file inside docker container
         $sudo docker cp -L testdata.csv postgresql_postgresql_1:/tmp/testdata.csv
     * Go inside the container and create a table
+        $sudo docker exec -it postgresql_postgresql_1 sh
         $ psql -U postgres
         postgres=# \c postgres
         postgres=# ALTER USER postgres WITH PASSWORD 'yourpass';
