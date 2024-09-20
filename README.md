@@ -13,6 +13,7 @@
             Creating apache-spark_spark-worker-1_1 ... done
     * Copy the sparktest.py to master node
         $ sudo docker cp -L sparktest.py apache-spark_spark-master_1:/opt/bitnami/spark/sparktest.py
+        $ sudo docker exec -it apache-spark_spark-master_1 spark-submit --master spark://172.18.0.2:7077 sparktest.py
             Among all the log messages there should be an output similar to the following
                 THE SUM IS HERE:  499500
     * Exercise: Create a word count program using pySpark and execute it in the cluster.
